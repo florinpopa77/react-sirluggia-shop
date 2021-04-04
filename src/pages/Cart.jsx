@@ -9,7 +9,7 @@ import { ReactComponent as Close} from '../assets/icons/close.svg';
 function Cart(props) {
     const totalSum = (products) => {
         return products.reduce((acc, product) => {
-            return acc + product.quantity * product.price;
+            return acc + product.quantity * product.pret;
         }, 0)
     }
 
@@ -31,12 +31,12 @@ function Cart(props) {
                                 return <div className="d-flex justify-content-between align-items-center text-center" key={product.id}>
                                     <div className="w-25 d-flex flex-column justify-content-center align-items-center">
                                         <img src={product.image} alt="Produs"/>
-                                        <p>{ product.name }</p>
+                                        <p>{ product.nume }</p>
                                     </div>
-                                    <p className="w-25">{ product.price } { product.currency }</p>
+                                    <p className="w-25">{ product.pret } { product.moneda }</p>
                                     <p className="w-25">{ product.quantity }</p>
                                     <div className="w-25 d-flex justify-content-center">
-                                        <p className="mr-2">{ product.price * product.quantity } { product.currency }</p>
+                                        <p className="mr-2">{ product.pret * product.quantity } { product.moneda }</p>
                                         <div onClick={() => props.removeFromCart({id: product.id})}>
                                             <Close />
                                         </div>
@@ -50,7 +50,7 @@ function Cart(props) {
                             </div>
                             <div className="w-25">
                                 <p className="my-4 text-center">
-                                    { totalSum(props.products) } { props.products[0].currency }
+                                    { totalSum(props.products) } { props.products[0].moneda }
                                 </p>
                             </div>
                         </div>

@@ -5,6 +5,7 @@ import { ReactComponent as ShoppingCart } from '../assets/icons/shopping-cart.sv
 import './Header.css';
 import { connect } from 'react-redux';
 import { logoutUser } from '../redux/actions/user';
+import {ReactComponent as Favorites} from '../assets/icons/heart-full.svg';
 
 function Header(props) {
     return(
@@ -27,6 +28,11 @@ function Header(props) {
                             <Link to="/cart" className="d-flex">
                                 <ShoppingCart className="ml-2"/>
                                 <p className="ml-1 mb-0">{ props.numberOfProducts }</p>
+                            </Link>
+                        </div>
+                        <div className="d-flex align-items-center">
+                            <Link to="/favorites" className="d-flex">
+                                <Favorites className="ml-2"/>
                             </Link>
                         </div>
                     </div>

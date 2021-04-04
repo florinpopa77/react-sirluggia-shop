@@ -12,6 +12,12 @@
     height: 100%;
 }
 
+.test{
+    display: inline;
+}
+
+
+
 /* Stilizarea pe mobile */
 @media (max-width: 768px) {
     /* ATENTIE! Se suprascrie stilizarea de mai sus, in cazul in care ecranul are mai putin de 768px */
