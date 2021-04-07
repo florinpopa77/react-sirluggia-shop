@@ -1,4 +1,4 @@
-import { signInWithGoogle, signOut } from '../../apis/firebase/firebase';
+import { signInWithGoogle, signOut, signInWithFacebook } from '../../apis/firebase/firebase';
 
 function startLoading() {
     return {
@@ -37,6 +37,18 @@ export function logoutUser() {
         signOut().then(() => {
             dispatch(updateUserData(null));
         }).catch((error) => {
+            dispatch(updateUserError(error));
+        });
+    }
+}
+
+export function loginFacebookUser() {
+    return (dispatch) => {
+        dispatch(startLoading());
+
+        signInWithFacebook().then(userData => {
+            dispatch(updateUserData(userData.user));
+        }).catch(error => {
             dispatch(updateUserError(error));
         });
     }
