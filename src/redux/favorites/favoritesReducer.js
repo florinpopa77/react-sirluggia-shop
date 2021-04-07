@@ -1,10 +1,12 @@
+import { ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES } from './favoritesConstants';
+
 const initialState = {
     products: []
 }
 
 export function favoritesReducer(state = initialState, action) {
     switch (action.type) {
-        case 'ADD_TO_FAVORITES':
+        case ADD_TO_FAVORITES:
             return Object.assign({}, state, {
                 products: [
                     ...state.products,
@@ -12,7 +14,7 @@ export function favoritesReducer(state = initialState, action) {
                 ]
             })
 
-        case 'REMOVE_FROM_FAVORITES':
+        case REMOVE_FROM_FAVORITES:
             const filteredProducts = state.products.filter(product => {
                 return product.id !== action.payload.id
             });

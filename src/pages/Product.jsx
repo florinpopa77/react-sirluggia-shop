@@ -3,8 +3,8 @@ import Layout from '../components/Layout';
 import products from '../utils/products.json';
 import './Product.css';
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/actions/cart';
-import { addToFavorites, removeFromFavorites} from '../redux/actions/favorites';
+import { addToCart } from '../redux/cart/cartActions';
+import { addToFavorites, removeFromFavorites} from '../redux/favorites/favoritesActions';
 import {ReactComponent as Favorites} from '../assets/icons/heart-full.svg';
 import {ReactComponent as NotInFavorites} from '../assets/icons/heart-empty.svg';
 

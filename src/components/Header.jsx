@@ -4,7 +4,7 @@ import Logo from '../assets/images/logo.png';
 import { ReactComponent as ShoppingCart } from '../assets/icons/shopping-cart.svg';
 import './Header.css';
 import { connect } from 'react-redux';
-import { logoutUser } from '../redux/actions/user';
+import { logoutUser } from '../redux/user/userActions';
 import {ReactComponent as Favorites} from '../assets/icons/heart-full.svg';
 
 function Header(props) {
