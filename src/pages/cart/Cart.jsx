@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../../components/layout/Layout';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../redux/cart/cartActions';
+import { removeFromCart } from '../../redux/cart/cartActions';
 import { Link } from 'react-router-dom';
 import './Cart.css';
-import { ReactComponent as Close} from '../assets/icons/close.svg';
+import { ReactComponent as Close} from '../../assets/icons/close.svg';
 
 function Cart(props) {
     const totalSum = (products) => {

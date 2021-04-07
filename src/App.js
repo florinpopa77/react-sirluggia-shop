@@ -3,12 +3,12 @@ import './App.css';
 import { Switch, Route } from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 import Page404 from './pages/Page404';
 import Category from './pages/Category';
-import Cart from './pages/Cart';
+import Cart from './pages/cart/Cart';
 import './utils/utility-classes.css';
-import Product from './pages/Product';
+import Product from './pages/product/Product';
 import TermsAndConditions from './pages/TermsAndConditions';
 import Favorites from './pages/Favorites';
 
